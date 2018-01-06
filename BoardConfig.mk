@@ -97,7 +97,7 @@ TW_EXTRA_LANGUAGES := true
 # set default language chinese
 TW_DEFAULT_LANGUAGE := zh_CN
 TW_INCLUDE_CRYPTO := true
-#TW_INCLUDE_NTFS_3G := true
+TW_INCLUDE_NTFS_3G := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_MAX_BRIGHTNESS := 255
 TW_THEME := portrait_hdpi
