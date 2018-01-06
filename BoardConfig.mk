@@ -62,6 +62,7 @@ TARGET_PREBUILT_KERNEL := device/oneplus/dumpling/prebuilt/Image.gz-dtb
 # Platform
 TARGET_BOARD_PLATFORM := msm8998
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno540
+TARGET_PLATFORM_DEVICE_BASE := /devices/soc/
 
 # Partitions
 BOARD_FLASH_BLOCK_SIZE := 262144 # (BOARD_KERNEL_PAGESIZE * 64)
