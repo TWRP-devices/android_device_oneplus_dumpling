@@ -49,7 +49,7 @@ TARGET_HW_DISK_ENCRYPTION := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3
-BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 boot_cpus=0-7 sched_enable_hmp=1 sched_enable_power_aware=1 
+BOARD_KERNEL_CMDLINE += lpm_levels.sleep_disabled=1 boot_cpus=0-7 mdss-dsi-panel-orientation=180 sched_enable_hmp=1 sched_enable_power_aware=1 
 BOARD_KERNEL_CMDLINE += service_locator.enable=1 swiotlb=2048 androidboot.usbcontroller=a800000.dwc3
 BOARD_KERNEL_CMDLINE += androidboot.configfs=true
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
