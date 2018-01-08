@@ -28,6 +28,21 @@
 on early-init
     mkdir /firmware 0771 system system
 
+on init
+    # Enable dt2w
+    write /proc/touchpanel/double_tap_enable 1
+
+    # Enable charging LED
+    write /sys/class/leds/red/trigger "battery-charging"
+    write /sys/class/leds/green/trigger "battery-full"
+
+    # Disable hw keys backlight
+    write /sys/class/leds/button-backlight/brightness 0
+	
+on boot
+    # Enable sched boost
+    write /proc/sys/kernel/sched_boost 1 	
+	
 on fs
     wait /dev/block/platform/soc/1da4000.ufshc
     symlink /dev/block/platform/soc/1da4000.ufshc /dev/block/bootdevice
@@ -35,6 +50,7 @@ on fs
     chown system drmrpc /dev/qseecom
     chmod 0664 /dev/ion
     chown system system /dev/ion
+    export LD_LIBRARY_PATH /sbin:/vendor/lib64:/vendor/lib64/hw
     install_keyring
 
     # Mount firmware
